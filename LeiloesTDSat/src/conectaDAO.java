@@ -6,15 +6,6 @@ import javax.swing.JOptionPane;
 
 
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Adm
- */
 public class conectaDAO {
     
     public Connection connectDB(){
@@ -22,7 +13,10 @@ public class conectaDAO {
         
         try {
         
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/uc11?user=root&password=");
+            //conn = DriverManager.getConnection("jdbc:mysql://localhost/uc11?user=root&password=Lipe3939@");
+            //conn = DriverManager.getConnection("jdbc:mysql://localhost/uc11?user=root&password=Lipe3939@&useSSL=false");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost/uc11?user=root&password=Lipe3939@&useSSL=false&allowPublicKeyRetrieval=true");
+
             
         } catch (SQLException erro){
             JOptionPane.showMessageDialog(null, "Erro ConectaDAO" + erro.getMessage());
